@@ -1,0 +1,7 @@
+{
+    "python.analysis.extraPaths": [
+        "./Gestion/Vista",
+        "./Gestion/Controlador",
+        "./Gestion/assets"
+    ]
+}
