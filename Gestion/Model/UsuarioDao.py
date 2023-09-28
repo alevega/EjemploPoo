@@ -1,4 +1,4 @@
-from DataBase import DataBase
+from Model.DataBase import DataBase
 
 class UsuarioDao:
 
@@ -10,7 +10,10 @@ class UsuarioDao:
 
     def get(self, id):
         return self.base.get("SELECT * FROM usuarios WHERE id = {}".format(id))
-
+    
+    def login(self, correo, passw):
+        return self.base.get("SELECT * FROM usuarios WHERE correo = '{}' and pass = '{}'".format(correo, passw))
+    
     def insert(self):
         pass
 

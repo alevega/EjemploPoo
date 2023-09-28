@@ -4,10 +4,15 @@ QWidget{
 	font: 10pt "Segoe UI";
 }
 
+.normal{
+    color:red
+}
+
 QLabel {
     color: rgb(221, 221, 221);
     font-weight: 600;
 }
+
 QLabel#heading {
     color: #0f1925;
     font-size: 18px;

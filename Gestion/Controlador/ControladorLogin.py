@@ -1,3 +1,5 @@
+
+from Model.Usuario import Usuario
 from Vista.LoginView import LoginView
 from PyQt6.QtWidgets import QApplication
 import sys
@@ -7,14 +9,15 @@ class ControladorLogin:
 
     def __init__(self, estilo):
         app = QApplication(sys.argv)
-        window = LoginView()
-        window.setWindowTitle("Gestion de Aplicaciones")
-        window.btn_login.clicked.connect(self.login)
-        window.show()
+        self.__window = LoginView()
+        self.__window.setWindowTitle("Gestion de Aplicaciones")
+        self.__window.get_btn_login().clicked.connect(self.login)
+        self.__window.show()
         with open(estilo) as f:
             app.setStyleSheet(f.read())
         app.exec()
 
 
     def login(self):
-        print("apreto")
+        usuario = Usuario(self.__window.get_correo(), self.__window.get_pass())
+        usuario.login()
