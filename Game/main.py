@@ -1,20 +1,15 @@
 #pip install pygame
+#pip install GooeyPy
 import pygame, sys
 from pygame.locals import *
+from Menu import Menu
 
-pygame.init()
-
-window = pygame.display.set_mode((500,400))
-pygame.display.set_caption("Juegon")
-icono = pygame.image.load("C:/Users/Lucho/OneDrive/Escritorio/Poo/EjemploPoo/Game/imagenes/icono.jpg")
-pygame.display.set_icon(icono)
-fondo = (255,255,255) #Color blanco
-
-window.fill(fondo)
+window = Menu()
 
 while True:
     for event in pygame.event.get():
         if event.type == QUIT:
             pygame.quit()
             sys.exit()
-    pygame.display.update()
+    window.movimiento_fondo()
+    #window.crear_botones()
