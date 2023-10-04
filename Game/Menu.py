@@ -35,11 +35,11 @@ class Menu:
         self.__fps = 60
         self.__reloj = pygame.time.Clock()
         self.__window = pygame.display.set_mode((self.__h,self.__w))
-        self.crear_botones()
-        icono = pygame.image.load(res[0][4])
-        self.__mapa = pygame.image.load(res[0][5]).convert()
+        #self.crear_botones()
+        icono = pygame.image.load(res[0][1])
+        self.__mapa = pygame.image.load(res[0][4]).convert()
         pygame.display.set_icon(icono)
-        pygame.display.set_caption(res[0][1])
+        pygame.display.set_caption(res[0][0])
         self.__x = 0
     
     def movimiento_fondo(self):
