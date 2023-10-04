@@ -11,4 +11,6 @@ while True:
             pygame.quit()
             sys.exit()
     window.movimiento_fondo()
-    #window.crear_botones()
+    window.crear_menu()
+    pygame.display.update()
+    

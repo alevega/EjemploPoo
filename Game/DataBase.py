@@ -14,7 +14,7 @@ class DataBase(metaclass=DataBaseMeta):
     
     def __init__(self):
         try:
-            self.conexion = psycopg2.connect(host="localhost", port="5434", database="juego", user="postgres", password="postgres")
+            self.conexion = psycopg2.connect(host="localhost", port="5432", database="juego", user="postgres", password="postgres")
             print('Conexion exitosa')
         except (Exception, psycopg2.DatabaseError) as error:
             print(error)
