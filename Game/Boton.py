@@ -2,7 +2,7 @@ import pygame
 
 class Boton:
     def __init__(self, texto, width, height, pos, window, elevacion):
-        __gui_font = pygame.font.Font("C:/Users/Lucho/OneDrive/Escritorio/Poo/EjemploPoo/Game/imagenes/Grand9K Pixel.ttf", 20)
+        __gui_font = pygame.font.Font("C:/Users/Lucho/OneDrive/Escritorio/Programacion/Poo/EjemploPoo/Game/imagenes/Grand9K Pixel.ttf", 20)
         self.__top_rect = pygame.Rect(pos, (width, height))
         
         self.__top_color = '#F2F3F6'

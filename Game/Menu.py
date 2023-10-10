@@ -12,9 +12,9 @@ class Menu:
         res = menu.get_all()
         self.__h,self.__w = res[0][2],res[0][3]
         self.__window = pygame.display.set_mode((self.__h,self.__w))
+        self.__titulo = res[0][0]
         self.__icono = pygame.image.load(res[0][1])
         self.__mapa = pygame.image.load(res[0][4]).convert()
-        self.__titulo = res[0][0]
         pygame.display.set_icon(self.__icono)
         pygame.display.set_caption(self.__titulo)
         self.__x = 0
@@ -51,6 +51,9 @@ class Menu:
 
     def get_w(self):
         return self.__w
+
+    def get_icono(self):
+        return self.__icono
     
     def movimiento_fondo(self):
         x_relativa = self.get_x() % self.get_fondo().get_rect().width
@@ -62,7 +65,7 @@ class Menu:
         segunda_window = pygame.Surface([400,400])
         segunda_window.set_alpha(128)
         segunda_window.fill((155,155,155))
-        logo = pygame.image.load("C:/Users/Lucho/OneDrive/Escritorio/Poo/EjemploPoo/Game/imagenes/titulo.png")
+        logo = pygame.image.load("C:/Users/Lucho/OneDrive/Escritorio/Programacion/Poo/EjemploPoo/Game/imagenes/titulo.png")
         self.__window.blit(segunda_window, (450,180))
         self.__window.blit(logo,(470,10))
         self.__boton_nueva_partida = Boton("Nueva Partida", 200, 40, (560,300), self.get_window(),6)
@@ -85,7 +88,7 @@ class Menu:
         segunda_window = pygame.Surface([400,400])
         segunda_window.set_alpha(128)
         segunda_window.fill((155,155,155))
-        logo = pygame.image.load("C:/Users/Lucho/OneDrive/Escritorio/Poo/EjemploPoo/Game/imagenes/titulo.png")
+        logo = pygame.image.load("C:/Users/Lucho/OneDrive/Escritorio/Programacion/Poo/EjemploPoo/Game/imagenes/titulo.png")
         self.__window.blit(segunda_window, (450,180))
         self.__window.blit(logo,(470,10))
         self.__btn_sonido = Boton("Sonido", 200, 40, (560,300), self.__window,6)
