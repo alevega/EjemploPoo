@@ -18,5 +18,5 @@ class Nuevo():
         self.__window.blit(self.__mapa, (0,0))
     
     def jugador(self):
-        pant_jugador = pygame.image.load("C:/Users/Lucho/OneDrive/Escritorio/Programacion/Poo/EjemploPoo/Game/imagenes/fantasma.png").convert()
-        self.__window.blit(pant_jugador, (450,180))
+        pant_jugador = pygame.image.load("C:/Users/Lucho/OneDrive/Escritorio/Programacion/Poo/EjemploPoo/Game/imagenes/fantasma.png")
+        self.__window.blit(pant_jugador, (300,10))
